@@ -226,13 +226,24 @@ export default function Index() {
                   </div>
                 </CardContent>
                 
-                <CardFooter className="p-4 pt-0">
+                <CardFooter className="p-4 pt-0 space-y-2">
                   <Button
                     className="w-full bg-cake-pink hover:bg-cake-pink/90 text-white"
                     onClick={() => handleAddToCart(cake)}
                   >
                     <ShoppingCart className="h-4 w-4 mr-2" />
                     Add to Cart
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className={cn(
+                      "w-full border-cake-pink text-cake-pink hover:bg-cake-pink/10",
+                      isInWishlist(cake.id) && "bg-cake-pink text-white hover:bg-cake-pink/90"
+                    )}
+                    onClick={() => handleToggleWishlist(cake)}
+                  >
+                    <Heart className={cn("h-4 w-4 mr-2", isInWishlist(cake.id) && "fill-current")} />
+                    {isInWishlist(cake.id) ? "In Wishlist" : "Add to Wishlist"}
                   </Button>
                 </CardFooter>
               </Card>
