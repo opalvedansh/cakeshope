@@ -30,7 +30,7 @@ const App = () => (
           <Route path="/cupcakes" element={<PlaceholderPage title="Cupcakes" description="Delicious individual treats perfect for any celebration or everyday indulgence." />} />
           <Route path="/pastries" element={<PlaceholderPage title="Pastries & Desserts" description="Artisanal pastries, cookies, and desserts made fresh daily with premium ingredients." />} />
           <Route path="/custom" element={<CustomOrder />} />
-          <Route path="/about" element={<PlaceholderPage title="About Sweet Delights" description="Learn about our story, our passion for baking, and our commitment to quality." />} />
+          <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<PlaceholderPage title="Contact Us" description="Get in touch with our team for orders, questions, or special requests." />} />
           <Route path="/faq" element={<PlaceholderPage title="Frequently Asked Questions" description="Find answers to common questions about our products, ordering, and delivery." />} />
           <Route path="/shipping" element={<PlaceholderPage title="Shipping Information" description="Learn about our delivery options, areas we serve, and shipping policies." />} />
