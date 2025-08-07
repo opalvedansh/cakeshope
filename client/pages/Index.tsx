@@ -276,19 +276,19 @@ export default function Index() {
                   </div>
                 </CardContent>
 
-                <CardFooter className="p-4 pt-0 flex gap-2">
+                <CardFooter className="p-3 sm:p-4 pt-0 flex gap-2">
                   <Button
-                    className="flex-1 bg-cake-pink hover:bg-cake-pink/90 text-white"
+                    className="flex-1 bg-cake-pink hover:bg-cake-pink/90 text-white text-sm sm:text-base py-2 sm:py-3"
                     onClick={() => handleAddToCart(cake)}
                   >
-                    <ShoppingCart className="h-4 w-4 mr-2" />
+                    <ShoppingCart className="h-4 w-4 mr-1 sm:mr-2" />
                     Add to Cart
                   </Button>
                   <Button
                     variant="outline"
                     size="icon"
                     className={cn(
-                      "border-cake-pink text-cake-pink hover:bg-cake-pink/10 shrink-0",
+                      "border-cake-pink text-cake-pink hover:bg-cake-pink/10 shrink-0 min-h-[44px] min-w-[44px]",
                       isInWishlist(cake.id) &&
                         "bg-cake-pink text-white hover:bg-cake-pink/90",
                     )}
