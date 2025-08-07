@@ -67,9 +67,9 @@ export default function Index() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-cake-white via-cake-cream/30 to-cake-gold/20 py-20 lg:py-32">
+      <section className="relative bg-gradient-to-br from-cake-white via-cake-cream/30 to-cake-gold/20 py-12 sm:py-20 lg:py-32">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
                 <Badge
