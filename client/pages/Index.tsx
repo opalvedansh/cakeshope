@@ -13,7 +13,7 @@ import { cn } from "@/lib/utils";
 export default function Index() {
   const featuredCakes = getFeaturedProducts();
   const { addItem } = useCart();
-  const { addItem: addToWishlist, isInWishlist } = useWishlist();
+  const { addItem: addToWishlist, removeItem: removeFromWishlist, isInWishlist } = useWishlist();
 
   const handleAddToCart = (product: any) => {
     addItem(product);
@@ -21,9 +21,10 @@ export default function Index() {
 
   const handleToggleWishlist = (product: any) => {
     if (isInWishlist(product.id)) {
-      // For now, we'll just add to wishlist (remove functionality can be added later)
+      removeFromWishlist(product.id);
+    } else {
+      addToWishlist(product);
     }
-    addToWishlist(product);
   };
 
   const categories = [
