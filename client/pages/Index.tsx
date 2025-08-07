@@ -5,58 +5,26 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Star, ShoppingCart, Heart, Clock, Users, Award } from "lucide-react";
 import { Link } from "react-router-dom";
+import { getFeaturedProducts } from "@/lib/products";
+import { useCart } from "@/contexts/CartContext";
+import { useWishlist } from "@/contexts/WishlistContext";
+import { cn } from "@/lib/utils";
 
 export default function Index() {
-  const featuredCakes = [
-    {
-      id: 1,
-      name: "Classic Chocolate Truffle",
-      price: 45.99,
-      originalPrice: 52.99,
-      rating: 4.9,
-      reviews: 127,
-      image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=300&fit=crop&crop=center",
-      category: "Chocolate Cakes",
-      isNew: false,
-      isBestseller: true
-    },
-    {
-      id: 2,
-      name: "Strawberry Dream Wedding Cake",
-      price: 189.99,
-      originalPrice: null,
-      rating: 5.0,
-      reviews: 89,
-      image: "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=400&h=300&fit=crop&crop=center",
-      category: "Wedding Cakes",
-      isNew: true,
-      isBestseller: false
-    },
-    {
-      id: 3,
-      name: "Red Velvet Cupcake Set",
-      price: 24.99,
-      originalPrice: 29.99,
-      rating: 4.8,
-      reviews: 203,
-      image: "https://images.unsplash.com/photo-1587668178277-295251f900ce?w=400&h=300&fit=crop&crop=center",
-      category: "Cupcakes",
-      isNew: false,
-      isBestseller: true
-    },
-    {
-      id: 4,
-      name: "Vanilla Bean Birthday Cake",
-      price: 38.99,
-      originalPrice: null,
-      rating: 4.7,
-      reviews: 156,
-      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center",
-      category: "Birthday Cakes",
-      isNew: false,
-      isBestseller: false
+  const featuredCakes = getFeaturedProducts();
+  const { addItem } = useCart();
+  const { addItem: addToWishlist, isInWishlist } = useWishlist();
+
+  const handleAddToCart = (product: any) => {
+    addItem(product);
+  };
+
+  const handleToggleWishlist = (product: any) => {
+    if (isInWishlist(product.id)) {
+      // For now, we'll just add to wishlist (remove functionality can be added later)
     }
-  ];
+    addToWishlist(product);
+  };
 
   const categories = [
     {
@@ -213,12 +181,16 @@ export default function Index() {
                       <Badge className="bg-cake-pink text-white">Bestseller</Badge>
                     )}
                   </div>
-                  <Button 
-                    variant="secondary" 
+                  <Button
+                    variant="secondary"
                     size="icon"
-                    className="absolute top-2 left-2 opacity-0 group-hover:opacity-100 transition-opacity bg-white/90 hover:bg-white"
+                    className={cn(
+                      "absolute top-2 left-2 opacity-0 group-hover:opacity-100 transition-opacity bg-white/90 hover:bg-white",
+                      isInWishlist(cake.id) && "opacity-100 bg-cake-pink/90 text-white hover:bg-cake-pink"
+                    )}
+                    onClick={() => handleToggleWishlist(cake)}
                   >
-                    <Heart className="h-4 w-4" />
+                    <Heart className={cn("h-4 w-4", isInWishlist(cake.id) && "fill-current")} />
                   </Button>
                 </div>
                 
@@ -254,7 +226,10 @@ export default function Index() {
                 </CardContent>
                 
                 <CardFooter className="p-4 pt-0">
-                  <Button className="w-full bg-cake-pink hover:bg-cake-pink/90 text-white">
+                  <Button
+                    className="w-full bg-cake-pink hover:bg-cake-pink/90 text-white"
+                    onClick={() => handleAddToCart(cake)}
+                  >
                     <ShoppingCart className="h-4 w-4 mr-2" />
                     Add to Cart
                   </Button>
