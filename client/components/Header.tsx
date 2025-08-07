@@ -2,8 +2,15 @@ import { Link } from "react-router-dom";
 import { ShoppingCart, Menu, Search, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { CartDrawer } from "./CartDrawer";
+import { SearchDialog } from "./SearchDialog";
+import { useCart } from "@/contexts/CartContext";
+import { useWishlist } from "@/contexts/WishlistContext";
 
 export function Header() {
+  const { itemCount } = useCart();
+  const { itemCount: wishlistCount } = useWishlist();
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between px-4">
@@ -39,18 +46,29 @@ export function Header() {
 
         {/* Right side icons */}
         <div className="flex items-center space-x-4">
-          <Button variant="ghost" size="icon" className="hidden sm:flex">
-            <Search className="h-5 w-5" />
-          </Button>
-          <Button variant="ghost" size="icon">
-            <Heart className="h-5 w-5" />
-          </Button>
+          <SearchDialog>
+            <Button variant="ghost" size="icon" className="hidden sm:flex">
+              <Search className="h-5 w-5" />
+            </Button>
+          </SearchDialog>
           <Button variant="ghost" size="icon" className="relative">
-            <ShoppingCart className="h-5 w-5" />
-            <Badge variant="destructive" className="absolute -top-2 -right-2 h-5 w-5 flex items-center justify-center text-xs">
-              0
-            </Badge>
+            <Heart className="h-5 w-5" />
+            {wishlistCount > 0 && (
+              <Badge variant="destructive" className="absolute -top-2 -right-2 h-5 w-5 flex items-center justify-center text-xs">
+                {wishlistCount}
+              </Badge>
+            )}
           </Button>
+          <CartDrawer>
+            <Button variant="ghost" size="icon" className="relative">
+              <ShoppingCart className="h-5 w-5" />
+              {itemCount > 0 && (
+                <Badge variant="destructive" className="absolute -top-2 -right-2 h-5 w-5 flex items-center justify-center text-xs">
+                  {itemCount}
+                </Badge>
+              )}
+            </Button>
+          </CartDrawer>
           
           {/* Mobile menu button */}
           <Button variant="ghost" size="icon" className="md:hidden">
