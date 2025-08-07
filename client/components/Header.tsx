@@ -18,10 +18,10 @@ export function Header() {
       <div className="container flex h-16 items-center justify-between px-4">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
-          <div className="h-8 w-8 rounded-full bg-cake-pink flex items-center justify-center">
-            <span className="text-white font-bold text-lg">🎂</span>
+          <div className="h-6 w-6 sm:h-8 sm:w-8 rounded-full bg-cake-pink flex items-center justify-center">
+            <span className="text-white font-bold text-sm sm:text-lg">🎂</span>
           </div>
-          <span className="text-2xl font-bold text-cake-pink">Sweet Delights</span>
+          <span className="text-lg sm:text-2xl font-bold text-cake-pink">Sweet Delights</span>
         </Link>
 
         {/* Desktop Navigation */}
