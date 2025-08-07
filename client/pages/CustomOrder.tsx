@@ -216,15 +216,15 @@ export default function CustomOrder() {
 
       <main className="min-h-screen bg-gradient-to-b from-cake-white to-cake-cream/20">
         {/* Hero Section */}
-        <section className="py-16 bg-gradient-to-r from-cake-pink/10 to-cake-gold/10">
+        <section className="py-12 sm:py-16 bg-gradient-to-r from-cake-pink/10 to-cake-gold/10">
           <div className="container mx-auto px-4 text-center">
             <div className="max-w-3xl mx-auto">
               <div className="mb-6">
-                <ChefHat className="h-16 w-16 text-cake-pink mx-auto mb-4" />
-                <h1 className="text-5xl font-bold text-foreground mb-4">
+                <ChefHat className="h-12 w-12 sm:h-16 sm:w-16 text-cake-pink mx-auto mb-4" />
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
                   Create Your Dream Cake
                 </h1>
-                <p className="text-xl text-muted-foreground">
+                <p className="text-lg sm:text-xl text-muted-foreground">
                   Design a completely custom cake with your choice of flavors,
                   decorations, and special touches. Our master bakers will bring
                   your vision to life.
