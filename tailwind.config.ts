@@ -57,6 +57,13 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        cake: {
+          pink: "hsl(var(--cake-pink))",
+          cream: "hsl(var(--cake-cream))",
+          gold: "hsl(var(--cake-gold))",
+          brown: "hsl(var(--cake-brown))",
+          white: "hsl(var(--cake-white))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
