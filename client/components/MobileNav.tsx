@@ -1,10 +1,26 @@
 import { useState } from "react";
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Link } from "react-router-dom";
-import { Menu, Home, Cake, Coffee, Palette, Info, Phone, Heart, ShoppingCart } from "lucide-react";
+import {
+  Menu,
+  Home,
+  Cake,
+  Coffee,
+  Palette,
+  Info,
+  Phone,
+  Heart,
+  ShoppingCart,
+} from "lucide-react";
 import { useCart } from "@/contexts/CartContext";
 import { useWishlist } from "@/contexts/WishlistContext";
 
@@ -40,7 +56,9 @@ export function MobileNav() {
             <div className="h-8 w-8 rounded-full bg-cake-pink flex items-center justify-center">
               <span className="text-white font-bold text-lg">🎂</span>
             </div>
-            <span className="text-xl font-bold text-cake-pink">Sweet Delights</span>
+            <span className="text-xl font-bold text-cake-pink">
+              Sweet Delights
+            </span>
           </SheetTitle>
         </SheetHeader>
 
@@ -48,28 +66,34 @@ export function MobileNav() {
           {/* Quick Actions */}
           <div className="py-6">
             <div className="grid grid-cols-2 gap-3">
-              <Button 
-                variant="outline" 
+              <Button
+                variant="outline"
                 className="flex items-center gap-2 border-cake-pink text-cake-pink hover:bg-cake-pink/10"
                 onClick={handleLinkClick}
               >
                 <Heart className="h-4 w-4" />
                 Wishlist
                 {wishlistCount > 0 && (
-                  <Badge variant="secondary" className="ml-auto bg-cake-pink/20 text-cake-pink">
+                  <Badge
+                    variant="secondary"
+                    className="ml-auto bg-cake-pink/20 text-cake-pink"
+                  >
                     {wishlistCount}
                   </Badge>
                 )}
               </Button>
-              <Button 
-                variant="outline" 
+              <Button
+                variant="outline"
                 className="flex items-center gap-2 border-cake-pink text-cake-pink hover:bg-cake-pink/10"
                 onClick={handleLinkClick}
               >
                 <ShoppingCart className="h-4 w-4" />
                 Cart
                 {itemCount > 0 && (
-                  <Badge variant="secondary" className="ml-auto bg-cake-pink/20 text-cake-pink">
+                  <Badge
+                    variant="secondary"
+                    className="ml-auto bg-cake-pink/20 text-cake-pink"
+                  >
                     {itemCount}
                   </Badge>
                 )}

@@ -21,27 +21,47 @@ export function Header() {
           <div className="h-6 w-6 sm:h-8 sm:w-8 rounded-full bg-cake-pink flex items-center justify-center">
             <span className="text-white font-bold text-sm sm:text-lg">🎂</span>
           </div>
-          <span className="text-lg sm:text-2xl font-bold text-cake-pink">Sweet Delights</span>
+          <span className="text-lg sm:text-2xl font-bold text-cake-pink">
+            Sweet Delights
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6">
-          <Link to="/" className="text-foreground hover:text-cake-pink transition-colors font-medium">
+          <Link
+            to="/"
+            className="text-foreground hover:text-cake-pink transition-colors font-medium"
+          >
             Home
           </Link>
-          <Link to="/cakes" className="text-muted-foreground hover:text-cake-pink transition-colors">
+          <Link
+            to="/cakes"
+            className="text-muted-foreground hover:text-cake-pink transition-colors"
+          >
             Cakes
           </Link>
-          <Link to="/cupcakes" className="text-muted-foreground hover:text-cake-pink transition-colors">
+          <Link
+            to="/cupcakes"
+            className="text-muted-foreground hover:text-cake-pink transition-colors"
+          >
             Cupcakes
           </Link>
-          <Link to="/pastries" className="text-muted-foreground hover:text-cake-pink transition-colors">
+          <Link
+            to="/pastries"
+            className="text-muted-foreground hover:text-cake-pink transition-colors"
+          >
             Pastries
           </Link>
-          <Link to="/custom" className="text-muted-foreground hover:text-cake-pink transition-colors">
+          <Link
+            to="/custom"
+            className="text-muted-foreground hover:text-cake-pink transition-colors"
+          >
             Custom Orders
           </Link>
-          <Link to="/about" className="text-muted-foreground hover:text-cake-pink transition-colors">
+          <Link
+            to="/about"
+            className="text-muted-foreground hover:text-cake-pink transition-colors"
+          >
             About
           </Link>
         </nav>
@@ -57,7 +77,10 @@ export function Header() {
             <Button variant="ghost" size="icon" className="relative">
               <Heart className="h-4 w-4 sm:h-5 sm:w-5" />
               {wishlistCount > 0 && (
-                <Badge variant="destructive" className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 h-4 w-4 sm:h-5 sm:w-5 flex items-center justify-center text-xs">
+                <Badge
+                  variant="destructive"
+                  className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 h-4 w-4 sm:h-5 sm:w-5 flex items-center justify-center text-xs"
+                >
                   {wishlistCount}
                 </Badge>
               )}
@@ -67,13 +90,16 @@ export function Header() {
             <Button variant="ghost" size="icon" className="relative">
               <ShoppingCart className="h-4 w-4 sm:h-5 sm:w-5" />
               {itemCount > 0 && (
-                <Badge variant="destructive" className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 h-4 w-4 sm:h-5 sm:w-5 flex items-center justify-center text-xs">
+                <Badge
+                  variant="destructive"
+                  className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 h-4 w-4 sm:h-5 sm:w-5 flex items-center justify-center text-xs"
+                >
                   {itemCount}
                 </Badge>
               )}
             </Button>
           </CartDrawer>
-          
+
           {/* Mobile menu */}
           <MobileNav />
         </div>
