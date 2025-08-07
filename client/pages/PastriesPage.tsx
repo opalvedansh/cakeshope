@@ -4,13 +4,13 @@ import { ProductCatalog } from "@/components/ProductCatalog";
 import { getProductsByCategory } from "@/lib/products";
 
 export default function PastriesPage() {
-  const pastries = getProductsByCategory('Pastries');
-  const categories = ['All', 'Pastries'];
+  const pastries = getProductsByCategory("Pastries");
+  const categories = ["All", "Pastries"];
 
   return (
     <>
       <Header />
-      
+
       <main className="min-h-screen bg-gradient-to-b from-cake-white to-cake-cream/20">
         {/* Hero Section */}
         <section className="py-16 bg-gradient-to-r from-cake-pink/10 to-cake-gold/10">
@@ -20,15 +20,16 @@ export default function PastriesPage() {
                 Artisan Pastries
               </h1>
               <p className="text-xl text-muted-foreground">
-                From delicate French macarons to flaky croissants, explore our collection of 
-                artisanal pastries and desserts crafted with traditional techniques.
+                From delicate French macarons to flaky croissants, explore our
+                collection of artisanal pastries and desserts crafted with
+                traditional techniques.
               </p>
             </div>
           </div>
         </section>
 
         <div className="container mx-auto px-4 py-12">
-          <ProductCatalog 
+          <ProductCatalog
             products={pastries}
             categories={categories}
             title="Pastry Collection"
@@ -36,7 +37,7 @@ export default function PastriesPage() {
           />
         </div>
       </main>
-      
+
       <Footer />
     </>
   );

@@ -27,21 +27,61 @@ const App = () => (
           <Toaster />
           <Sonner />
           <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/cakes" element={<CakesPage />} />
-          <Route path="/cupcakes" element={<CupcakesPage />} />
-          <Route path="/pastries" element={<PastriesPage />} />
-          <Route path="/custom" element={<CustomOrder />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/contact" element={<PlaceholderPage title="Contact Us" description="Get in touch with our team for orders, questions, or special requests." />} />
-          <Route path="/faq" element={<PlaceholderPage title="Frequently Asked Questions" description="Find answers to common questions about our products, ordering, and delivery." />} />
-          <Route path="/shipping" element={<PlaceholderPage title="Shipping Information" description="Learn about our delivery options, areas we serve, and shipping policies." />} />
-          <Route path="/returns" element={<PlaceholderPage title="Returns & Exchanges" description="Information about our return policy and how to handle any issues with your order." />} />
-          <Route path="/terms" element={<PlaceholderPage title="Terms & Conditions" description="Our terms of service, privacy policy, and legal information." />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/cakes" element={<CakesPage />} />
+              <Route path="/cupcakes" element={<CupcakesPage />} />
+              <Route path="/pastries" element={<PastriesPage />} />
+              <Route path="/custom" element={<CustomOrder />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route
+                path="/contact"
+                element={
+                  <PlaceholderPage
+                    title="Contact Us"
+                    description="Get in touch with our team for orders, questions, or special requests."
+                  />
+                }
+              />
+              <Route
+                path="/faq"
+                element={
+                  <PlaceholderPage
+                    title="Frequently Asked Questions"
+                    description="Find answers to common questions about our products, ordering, and delivery."
+                  />
+                }
+              />
+              <Route
+                path="/shipping"
+                element={
+                  <PlaceholderPage
+                    title="Shipping Information"
+                    description="Learn about our delivery options, areas we serve, and shipping policies."
+                  />
+                }
+              />
+              <Route
+                path="/returns"
+                element={
+                  <PlaceholderPage
+                    title="Returns & Exchanges"
+                    description="Information about our return policy and how to handle any issues with your order."
+                  />
+                }
+              />
+              <Route
+                path="/terms"
+                element={
+                  <PlaceholderPage
+                    title="Terms & Conditions"
+                    description="Our terms of service, privacy policy, and legal information."
+                  />
+                }
+              />
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
           </BrowserRouter>
         </WishlistProvider>
       </CartProvider>
