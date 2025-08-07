@@ -195,11 +195,11 @@ export function ProductCatalog({
           </div>
 
           {/* View Mode */}
-          <div>
+          <div className="sm:col-span-2 md:col-span-1">
             <label className="text-sm font-medium text-foreground mb-2 block">
               View
             </label>
-            <div className="flex gap-2">
+            <div className="flex gap-2 sm:justify-center md:justify-start">
               <Button
                 variant={viewMode === "grid" ? "default" : "outline"}
                 size="icon"
