@@ -124,16 +124,16 @@ export default function Index() {
               <img
                 src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&h=600&fit=crop&crop=center"
                 alt="Beautiful chocolate cake"
-                className="relative rounded-3xl shadow-2xl w-full h-[500px] object-cover"
+                className="relative rounded-3xl shadow-2xl w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover"
               />
-              <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-6 shadow-lg border border-cake-pink/20">
-                <div className="flex items-center space-x-3">
-                  <Clock className="h-8 w-8 text-cake-pink" />
+              <div className="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 bg-white rounded-2xl p-3 sm:p-6 shadow-lg border border-cake-pink/20">
+                <div className="flex items-center space-x-2 sm:space-x-3">
+                  <Clock className="h-6 w-6 sm:h-8 sm:w-8 text-cake-pink" />
                   <div>
-                    <p className="font-semibold text-foreground">
+                    <p className="font-semibold text-foreground text-sm sm:text-base">
                       Same Day Delivery
                     </p>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-xs sm:text-sm text-muted-foreground">
                       Order before 2 PM
                     </p>
                   </div>
