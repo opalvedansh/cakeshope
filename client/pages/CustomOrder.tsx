@@ -244,8 +244,8 @@ export default function CustomOrder() {
           </div>
         </section>
 
-        <div className="container mx-auto px-4 py-12">
-          <div className="grid lg:grid-cols-3 gap-8">
+        <div className="container mx-auto px-4 py-6 sm:py-12">
+          <div className="grid lg:grid-cols-3 gap-6 lg:gap-8">
             {/* Order Form */}
             <div className="lg:col-span-2 space-y-8">
               {/* Step 1: Cake Type */}
