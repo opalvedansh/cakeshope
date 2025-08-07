@@ -47,10 +47,10 @@ export function Header() {
         </nav>
 
         {/* Right side icons */}
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-2 sm:space-x-4">
           <SearchDialog>
-            <Button variant="ghost" size="icon" className="hidden sm:flex">
-              <Search className="h-5 w-5" />
+            <Button variant="ghost" size="icon">
+              <Search className="h-4 w-4 sm:h-5 sm:w-5" />
             </Button>
           </SearchDialog>
           <WishlistDrawer>
