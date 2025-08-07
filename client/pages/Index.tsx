@@ -78,11 +78,11 @@ export default function Index() {
                 >
                   ✨ Fresh Baked Daily
                 </Badge>
-                <h1 className="text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
                   Sweet Moments
                   <span className="text-cake-pink block">Made Perfect</span>
                 </h1>
-                <p className="text-xl text-muted-foreground leading-relaxed">
+                <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
                   Discover our handcrafted cakes, cupcakes, and pastries made
                   with the finest ingredients and lots of love. Every bite tells
                   a story of tradition and excellence.
