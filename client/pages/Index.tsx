@@ -213,13 +213,13 @@ export default function Index() {
                         {cake.rating} ({cake.reviews})
                       </span>
                     </div>
-                    <div className="flex items-baseline space-x-2">
+                    <div className="flex items-start justify-start space-x-2">
                       <span className="text-lg font-bold text-foreground">
                         ${cake.price}
                       </span>
                       {cake.originalPrice && (
                         <span className="text-sm text-muted-foreground line-through">
-                          ${cake.originalPrice}
+                          {cake.originalPrice}
                         </span>
                       )}
                     </div>
