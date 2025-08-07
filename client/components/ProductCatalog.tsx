@@ -131,8 +131,8 @@ export function ProductCatalog({
       </div>
 
       {/* Filters and Search */}
-      <div className="bg-muted/30 rounded-lg p-6">
-        <div className="grid gap-4 md:grid-cols-4 lg:grid-cols-5 items-end">
+      <div className="bg-muted/30 rounded-lg p-4 sm:p-6">
+        <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 items-end">
           {/* Search */}
           <div className="md:col-span-2">
             <label className="text-sm font-medium text-foreground mb-2 block">
