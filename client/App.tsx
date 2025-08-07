@@ -11,6 +11,9 @@ import NotFound from "./pages/NotFound";
 import PlaceholderPage from "./pages/PlaceholderPage";
 import CustomOrder from "./pages/CustomOrder";
 import AboutPage from "./pages/AboutPage";
+import CakesPage from "./pages/CakesPage";
+import CupcakesPage from "./pages/CupcakesPage";
+import PastriesPage from "./pages/PastriesPage";
 import { CartProvider } from "./contexts/CartContext";
 import { WishlistProvider } from "./contexts/WishlistContext";
 
@@ -26,9 +29,9 @@ const App = () => (
           <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/cakes" element={<PlaceholderPage title="Cakes Collection" description="Explore our beautiful selection of custom cakes for weddings, birthdays, and special occasions." />} />
-          <Route path="/cupcakes" element={<PlaceholderPage title="Cupcakes" description="Delicious individual treats perfect for any celebration or everyday indulgence." />} />
-          <Route path="/pastries" element={<PlaceholderPage title="Pastries & Desserts" description="Artisanal pastries, cookies, and desserts made fresh daily with premium ingredients." />} />
+          <Route path="/cakes" element={<CakesPage />} />
+          <Route path="/cupcakes" element={<CupcakesPage />} />
+          <Route path="/pastries" element={<PastriesPage />} />
           <Route path="/custom" element={<CustomOrder />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<PlaceholderPage title="Contact Us" description="Get in touch with our team for orders, questions, or special requests." />} />
