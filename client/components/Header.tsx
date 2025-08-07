@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { CartDrawer } from "./CartDrawer";
 import { SearchDialog } from "./SearchDialog";
+import { WishlistDrawer } from "./WishlistDrawer";
 import { useCart } from "@/contexts/CartContext";
 import { useWishlist } from "@/contexts/WishlistContext";
 
