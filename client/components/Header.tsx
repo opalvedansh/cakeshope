@@ -52,14 +52,16 @@ export function Header() {
               <Search className="h-5 w-5" />
             </Button>
           </SearchDialog>
-          <Button variant="ghost" size="icon" className="relative">
-            <Heart className="h-5 w-5" />
-            {wishlistCount > 0 && (
-              <Badge variant="destructive" className="absolute -top-2 -right-2 h-5 w-5 flex items-center justify-center text-xs">
-                {wishlistCount}
-              </Badge>
-            )}
-          </Button>
+          <WishlistDrawer>
+            <Button variant="ghost" size="icon" className="relative">
+              <Heart className="h-5 w-5" />
+              {wishlistCount > 0 && (
+                <Badge variant="destructive" className="absolute -top-2 -right-2 h-5 w-5 flex items-center justify-center text-xs">
+                  {wishlistCount}
+                </Badge>
+              )}
+            </Button>
+          </WishlistDrawer>
           <CartDrawer>
             <Button variant="ghost" size="icon" className="relative">
               <ShoppingCart className="h-5 w-5" />
