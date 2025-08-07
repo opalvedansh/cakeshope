@@ -74,10 +74,8 @@ export function Header() {
             </Button>
           </CartDrawer>
           
-          {/* Mobile menu button */}
-          <Button variant="ghost" size="icon" className="md:hidden">
-            <Menu className="h-5 w-5" />
-          </Button>
+          {/* Mobile menu */}
+          <MobileNav />
         </div>
       </div>
     </header>
